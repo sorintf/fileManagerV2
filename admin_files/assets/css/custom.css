@@ -1,0 +1,209 @@
+
+
+
+
+ol {
+  margin-left: 30px;
+  counter-reset: item;
+}
+
+.wtree li {
+  list-style-type: none;
+  margin: 10px 0 10px 10px;
+  position: relative;
+}
+.wtree li:before {
+  content: "";
+  counter-increment: item;
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 30px;
+  height: 15px;
+}
+.wtree li:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -30px;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  width: 30px;
+  height: 100%;
+}
+.wtree li:last-child:after {
+  display: none;
+}
+.wtree li span {
+  display: block;
+  border: 1px solid #ddd;
+  padding: 10px;
+  color: #666666;
+  text-decoration: none;
+}
+.wtree li span:before {
+  content: counters(item, ".") " ";
+}
+
+.wtree li span:hover, 
+.wtree li span:focus {
+  color: #000;
+  border: 1px solid #474747;
+}
+.wtree li span:hover + ol li span, 
+.wtree li span:focus + ol li span {
+  color: #000;
+  border: 1px solid #474747;
+}
+.wtree li span:hover + ol li:after, 
+.wtree li span:hover + ol li:before, 
+.wtree li span:focus + ol li:after, 
+.wtree li span:focus + ol li:before {
+  border-color: #474747;
+}
+
+.wtree li span, 
+.mtree li span {
+  background-color: #DDF3FE;
+}
+.wtree li li span, 
+.mtree li li span {
+  background-color: #DDEBC8;
+}
+
+.wtree li li li span, 
+.mtree li li li span {
+  background-color: #FEFCD5;
+}
+.wtree li li li li span, 
+.mtree li li li li span {
+  background-color: #fee4d5;
+}
+.wtree li li li li li span, 
+.mtree li li li li li span {
+  background-color: #d5feec;
+}
+.wtree li li li li li li span, 
+.mtree li li li li li li span {
+  background-color: #f3d5fe;
+}
+.wtree li li li li li li li span, 
+.mtree li li li li li li li span {
+  background-color: #fed5f2;
+}
+.wtree li li li li li li li li span, 
+.mtree li li li li li li li li span {
+  background-color: #d5e6fe;
+}
+.willmove, 
+.willmove + ol li span {
+    background-color: #b5b5b5!important;
+}
+
+.noshow + ol {
+    display: none;
+}
+
+.lists .wrap-card .favorite {
+    cursor: pointer;
+}
+.lists.list-cards {}
+.lists.list-cards .wrap-card {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.lists.list-cards .wrap-card .favorite, 
+.lists.list-cards .wrap-card .thumbnail, 
+.lists.list-cards .wrap-card .name,
+.lists.list-cards .wrap-card .dropdown {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.lists.list-cards .wrap-card .thumbnail {
+    height: 250px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.lists.list-cards .wrap-card .thumbnail .pc-icon {
+    width: 150px;
+    height: 150px;
+}
+.lists.list-cards .wrap-card .name {
+    width: calc(100% - 60px);
+}
+.lists.list-cards .wrap-card .dropdown {
+    width: 60px;
+}
+@media(min-width: 1200px) {
+    .lists.list-cards .wrap-card {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+.lists.grid-cards {}
+.lists.grid-cards .wrap-card {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.lists.grid-cards .wrap-card .favorite {
+    flex: 0 0 auto;
+    width: auto;
+}
+.lists.grid-cards .wrap-card .favorite .pc-icon {
+    height: 25px;
+    width: 25px;
+}
+.lists.grid-cards .wrap-card .thumbnail {
+    flex: 0 0 auto;
+    width: auto;
+}
+.lists.grid-cards .wrap-card .thumbnail img {
+    height: auto;
+    width: auto;
+    max-width: 50px;
+}
+.lists.grid-cards .wrap-card .thumbnail .pc-icon {
+    height: 50px;
+    width: 50px;
+}
+.lists.grid-cards .wrap-card .name{
+    flex: 1 0 0%;
+}
+.lists.grid-cards .wrap-card .dropdown{
+    flex: 0 0 auto;
+    width: 60px;
+}
+
+
+.selectable.t01 .thumbnail .form-check {
+    display: none;
+}
+.selectable.t01.active .thumbnail .pc-icon {
+    display: none;
+}
+.selectable.t01.active .thumbnail .form-check {
+    display: block;
+}
+
+
+.selectable.t02 .thumbnail .form-check {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .8);
+}
+.selectable.t02.active .thumbnail .form-check {
+    display: block;
+}
+
+
+
